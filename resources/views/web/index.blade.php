@@ -67,7 +67,8 @@
                                         <a href="{{ route('products.show', $recently_product) }}" class="link-dark">{{ $recently_product->name }}</a>
                                         <br>
                                         {{-- ★5つ評価 --}}
-                                        1 他のページと同じコードを入力してもうまくいかない
+                                        <span class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}"></span>
+                                        {{ round($recommend_product->reviews->avg('score') * 2) / 2 }}
                                         <br>
                                         {{-- ★5つ評価 --}}
                                         <label>￥{{ number_format($recently_product->price) }}</label>
@@ -97,7 +98,8 @@
                                         <a href="{{ route('products.show', $featured_product) }}" class="link-dark">{{ $featured_product->name }}</a>
                                         <br>
                                         {{-- ★5つ評価 --}}
-                                        1 他のページと同じコードを入力してもうまくいかない
+                                        <span class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}"></span>
+                                        {{ round($recommend_product->reviews->avg('score') * 2) / 2 }}
                                         <br>
                                         {{-- ★5つ評価 --}}
                                         <label>￥{{ number_format($featured_product->price) }}</label>
